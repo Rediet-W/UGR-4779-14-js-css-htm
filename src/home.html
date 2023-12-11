@@ -2,28 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@1,9..40,300&family=Dancing+Script:wght@600&family=Dosis:wght@300&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <header>
-        <img src="./Images/Logo.jpg" alt="Logo" width="32" height="32"> 
-        <h1> Rediet Woudma </h1>
-        <img src="./Images/Nav.png" alt="Navigation" width="24" height="24">
+    <header class="header"><section class="header__nav">
+        <section class="name-logo"><img src="./Images/Logo.jpg" alt="Logo" width="50" height="50" class="header__logo"> 
+        <h1 class="header__logo"> Rediet Woudma </h1></section>
+        <a href="#" class="toggle-button">
+            <span class="toggle-button__bar"></span>
+            <span class="toggle-button__bar"></span>
+            <span class="toggle-button__bar"></span>
+        </a></section>
+        <section class="nav-links">
+            <ul class="nav-links__list">
+                <li class="nav-links__item"><a href="./home.html">Home</a></li>
+                <li class="nav-links__item"><a href="./Hobby.html">Hobby</a></li>
+                <li class="nav-links__item"><a href="./Places_visited.html">Places visited</a></li>
+                <li class="nav-links__item"><a href="./Books_read.html">Books read</a></li>
+                <li class="nav-links__item"><a href="./Contributions.html">Contributions</a></li>
+            </ul></section>
     </header>
     <main>
-        <section id="Top">
-                <h2> <i>Home</i></h2>
-                <blockquote> Shoot for the moon even when you <i>miss</i> it you will land among the stars</blockquote>
-            <img src="../src/Images/left_arrow.svg" alt="left arrow" width="24" height="24">
-            <img src="../src/Images/Home.webp" alt="Home" width="1000" height="200">
-            <a href="#Top"> Read More</a>
-            <img src="../src/Images/Right_arrow.svg" alt="right arrow" width="24" height="24"> 
+        <section class="home" class="sliding">
+            <h2 class="sliding__heading"> <i>Home</i></h2>
+                <img src="../src/Images/left_arrow.svg" alt="left arrow" width="24" height="24" class="sliding__left ">
+                <blockquote id="blockquote"> Shoot for the moon even when you <i>miss</i> it you will land among the stars</blockquote>
+             <img src="../src/Images/Right_arrow.svg" alt="right arrow" width="24" height="24" class="sliding__right"> 
+            <a href="#Tophome" class="sliding__link"> Read More</a>
         </section>
         <section>
             <h2> Professional Summary </h2>
             <p> Versatile software engineering graduate with a degree in law, combining technical proficiency and legal knowledge to deliver innovative solutions. Strong project management skills, adept at navigating complex regulations, and ensuring compliance. Effective collaborator and problem-solver, with a passion for staying current in both software engineering and legal practices.</p>
             </section>
-            <section>
+            <section class="skill-background">
+            <section class="skill">
                 <h2> Skills</h2>
                 <ul> <li> Software Development </li>
                     <li> Legal Compliance</li>
@@ -36,13 +53,13 @@
                     <li> Project Management</li>
                     <li> Continuous Learning </li></ul>
             </section>
-            <section> 
+            <section class="background"> 
                 <h2> Educational Background</h2>
                 <p> <strong>Bachelor of Science</strong> : Software Engineering and Computing Technologies, Addis Ababa University, 2021-2026: <br>
                     Completed a comprehensive program that provided a strong foundation in software engineering principles, programming languages, and software development methodologies. Developed skills in designing and implementing software solutions, collaborating in team environments, and delivering successful projects.</p>
                 <p> <strong> Bachelor of Arts </strong> : Jurisprudence, University of Oxford, 2027-2030: <br>
                     Pursued a prestigious program in Jurisprudence at the University of Oxford, studying law and legal theory at an advanced level. Explored various areas of law, including contract law, criminal law, constitutional law, and more. Gained critical thinking, analytical, and research skills necessary for legal analysis and problem-solving. Engaged in rigorous academic study and developed a comprehensive understanding of legal principles and their application in different contexts.</p>
-            </section>
+            </section></section>
             <section> 
                     <h2>Work Experience </h2>
                 <p><em>Software Engineer, Amazon, 2026: </em><br>
@@ -71,20 +88,22 @@
                 Email: john.smith@rdxtech.com<br>
                 Phone: +1 123-456-7890<br></p></section>
     </main>
-    <footer> 
+    <footer> <section class="left-for-two">
         <section><h4> Contact</h4>
-        <img src="./Images/email.svg" alt="email icon" width="24" height="24">
-        Redietwoudma@gmail.com<br>
-        <img src="./Images/phone.svg" alt="phone icon" width="24" height="24">
-        +251 912141567<br>
-        <a href="https://www.linkedin.com/yourprofile"><img src="./Images/linkedin.svg" alt="linkedin icon" width="24" height="24"></a>
-        <a href="https://www.instagram.com/yourprofile"><img src="./Images/instagram.svg" alt="instagram icon" width="24" height="24"></a>
-        <a href="https://www.telegram.com/yourprofile"><img src="./Images/telegram.svg" alt="telegram icon" width="24" height="24"></a>
-        <a href="https://www.whatsapp.com/yourprofile"><img src="./Images/whatsapp.svg" alt="whatsapp icon" width="24" height="24"></a>
-        </section>
-        <section>
+        <section class="contact-item"><img src="./Images/email.svg" alt="email icon" width="24" height="24">
+        Redietwoudma@gmail.com<br></section>
+        <section class="contact-item"><img src="./Images/phone.svg" alt="phone icon" width="24" height="24">
+        +251 912141567<br></section></section>
+        <section class="social-media">
+            <section class="icons1">
+        <a href="https://www.linkedin.com/in/rediet-woudma-1410692a2/" ><img src="./Images/linkedin.svg" alt="linkedin icon" width="24" height="24"></a>
+        <a href="https://www.instagram.com/?next=%2Fyourprofile%2F"><img src="./Images/instagram.svg" alt="instagram icon" width="24" height="24"></a></section>
+        <section class="icons2"><a href="https://t.me/Rediet_Woudma" ><img src="./Images/telegram.svg" alt="telegram icon" width="24" height="24"></a>
+        <a href="https://www.whatsapp.com/yourprofile" ><img src="./Images/whatsapp.svg" alt="whatsapp icon" width="24" height="24"></a></section>
+        </section></section>
+        <section class="quicklinks">
             <h4> Quick Links</h4>
-            <a href="#Top"> Home</a><br>
+            <a href="#Top" > Home</a><br>
             <a href="./Hobby.html">Hobby</a><br>
             <a href="./Places_visited.html">Places Visited</a><br>
             <a href="./Books_read.html">Books Read</a><br>

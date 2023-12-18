@@ -26,41 +26,121 @@
 body {
   padding: 20px;
 }
-/* sliding part */
-.sliding__heading {
-  align-self: center;
-  grid-column: span 3;
-  justify-self: center;
-}
 
-.sliding__link {
-  grid-column: 1 / 3;
-  justify-self: center;
-  text-decoration: none;
-  color: black;
+.topic{margin-left: 50%;
+  padding:20px;
 }
-
-.sliding__left {
-  grid-row: 2 / 3;
-  grid-column: 1 / 2;
-  justify-self: start;
-}
-
-.sliding__right {
-  justify-self: end;
-  position: absolute;
-}
-
-#blockquote {
-  position: static;
-  color: white;
+.blockquote{color:white;
+  margin-left: 20%;
   font-size: x-large;
   font-family: 'Montserrat', sans-serif;
-  text-align: center;
-  grid-column: 1 / 3;
-  grid-row: 2/3;
-  margin-left: 15rem;
-  margin-bottom: 3rem;
+  margin-bottom: 50%;
+}
+.active {
+  display: block;
+}
+.item{
+  width: 100%;
+  flex: 0 1 100%;
+  object-fit: contain;
+}
+.slider{
+  width:70%;
+  max-width:100%;
+  height: 500px;
+  margin:auto;
+  position: relative;
+  overflow: hidden;
+}
+.list{
+  position: absolute;
+  top:0;
+  left:0;
+  height: 100%;
+  display:flex;
+  width:max-content;
+  transition: 1s ease;
+}
+.list .inner{
+  width: 1300px;
+  max-width: 100vw;
+  height: 100%;
+  object-fit: cover;
+}
+.buttons{
+  position:absolute;
+  top: 45%;
+  left: 5%;
+  width:90%;
+  display:flex;
+  justify-content:space-between;
+}
+.buttons button{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(28, 105, 105);
+  color: #fff;
+  border: none;
+}
+.dots{
+  position: absolute;
+  bottom:10px;
+  color: #0f0e0e;
+  left:0;
+  width:100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.dots li{
+  list-style: none;
+  width: 10px;
+  height: 10px;
+  background-color: #050404;
+  margin: 20px;
+  border-radius: 20px;
+  transition: 1s;
+}
+.dots li.active{
+  width: 30px;
+}
+/*home*/
+.home{
+  background-image: url(../Images/Home.webp);
+  background-size: cover;
+  background-position: center;
+  height:700px;
+  position:relative;
+}
+/*hobby*/
+.hobby{
+  background-image: url(../Images/hobby.jpg);
+  background-size: cover;
+  background-position: center;
+  height:700px;
+  position:relative;
+}
+
+/* places visited*/
+.places-visited{
+  background-image: url(../Images/Travel.jpg);
+  background-size: cover;
+  background-position: center;
+  height:700px;
+  position:relative;
+  width:auto;
+}
+
+/*books read*/
+.books{
+  background-image: url(../Images/Books.jpg);
+  background-size: cover;
+  background-position: center;
+  height:700px;
+  width:fit-content;
+  position:relative;
 }
 
 h2 {
@@ -73,73 +153,7 @@ li,p,article {
 }
 /*footer*/
 
-/* home */
-.home {
-  background-image: url(../Images/Home.webp);
-  background-size: cover;
-  height: 400px;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  display: grid;
-  grid-gap: 10px;
-  grid-column-gap: 47px;
-  align-content: center;
-}
 
-/* hobby */
-.hobby {
-  background-image: url(../Images/hobby.jpg);
-  background-size: cover;
-  height: 400px;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  display: grid;
-  grid-gap: 10px;
-  grid-column-gap: 47px;
-  align-content: center;
-}
-
-/* places visited */
-.places-visited {
-  background-image: url(../Images/Travel.jpg);
-  background-size: cover;
-  height: 400px;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  display: grid;
-  grid-gap: 10px;
-  grid-column-gap: 0.5rem;
-  align-content: center;
-}
-
-#blockquotep {
-  position: static;
-  color: white;
-  font-size: x-large;
-  font-family: cursive;
-  text-align: center;
-  grid-column: 1 / 3;
-  grid-row: 2/3;
-  margin-left: 80%;
-  margin-bottom: 3rem;
-}
-
-/* books read */
-.books {
-  background-image: url(../Images/Books.jpg);
-  background-size: cover;
-  height: 400px;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  display: grid;
-  grid-gap: 10px;
-  grid-column-gap: 47px;
-  align-content: center;
-}
 /* table */
 .table {
   border-collapse: collapse;
@@ -167,22 +181,22 @@ li,p,article {
   display: inline-flex;
   gap: 50px;
 }
+a {
+  text-decoration: none;
+  color: black;
+}
 
 /* contributions */
 .contributions {
   background-image: url(../Images/contibutions.jpg);
-  background-size: cover;
-  height: 400px;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  display: grid;
-  grid-gap: 10px;
-  grid-column-gap: 0.5rem;
-  align-content: center;
-  opacity: 0.7;
+    background-size: cover;
+    background-position: center;
+    height:700px;
+    position:relative;
 }
-
+.contributions .blockquote{
+  color: #050404;
+}
 #Racdebo {
   margin: 0px;
 }
@@ -191,6 +205,7 @@ li,p,article {
 
 /* mobile portrait */
 @media only screen and (max-width: 480px) {
+  
   /* nav */
   .name-logo {
     display: flex;
@@ -199,6 +214,9 @@ li,p,article {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+  }
+  .slider{
+    width:70%;
   }
   /* nav links */
   .nav-links {
@@ -224,7 +242,7 @@ li,p,article {
     display: block;
     margin: 0.5rem;
   }
-  .nav-links--active {
+  .nav-links:active {
     display: flex;
   }
   .nav-links__item:hover {
@@ -284,6 +302,10 @@ li,p,article {
     display: flex;
     flex-direction: column;
   }
+  a {
+    text-decoration: none;
+    color: black;
+  }
 }
 /* mobile landscape */
 @media only screen and (min-width: 481px) and (max-width: 767px) {
@@ -295,6 +317,9 @@ li,p,article {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+  }
+  .slider{
+    width:70%;
   }
   /* nav links */
   .nav-links {
@@ -320,7 +345,7 @@ li,p,article {
     display: block;
     margin: 0.5rem;
   }
-  .nav-links--active {
+  .nav-links:active {
     display: flex;
   }
   .nav-links__item:hover {
@@ -412,6 +437,9 @@ li,p,article {
   /* nav links */
   .name-logo {
     display: flex;
+  }
+  .slider{
+    width:70%;
   }
   .nav-links__list {
     margin: 0;
@@ -527,6 +555,9 @@ li,p,article {
   /* nav links */
   .name-logo {
     display: flex;
+  }
+  .slider{
+    width:70%;
   }
   .nav-links__list {
     margin: 0;
@@ -647,10 +678,9 @@ li,p,article {
     display: flex;
     flex-basis: 50%;
   }
-  .skill {
-    flex: 1fr;
-  }
-  .background {
-    flex: 2fr;
-  }
+  
+}
+
+.active {
+  display: block;
 }
